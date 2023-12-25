@@ -1,0 +1,75 @@
+.header-bg {
+    background-color: var(--cor-12)
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;   /* padding 20px cima/baixo  direita/esquerda */
+    max-width: 1200px;
+    margin-left: auto;  /* alinhamento ao centro quando header cresce acima de 1200px */
+    margin-right: auto; /* alinhamento ao centro quando header cresce acima de 1200px */
+}
+
+.header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.header-menu a {
+    padding: 16px 0px; /* padding 16px cima/baixo e 0px esquerda/direita*/
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.header-menu a:after {  /* Efeito de sublinhar o botao ao passar o mouse sobre o mesmo*/
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px; /* faz com que o efeito de sublinhar o botão ao passar o mouse comece do início do botão*/
+    background: linear-gradient(#ffb60d, #e59317);
+    margin-top: 4px;
+    transition: 0.3s; /* transição de 3 segundos do sublinhado ao passar o mouse sobre o botão */
+    position: absolute;
+}
+
+
+.header-menu a:hover:after { /* efeito que faz com que a transiçao aconteça em 100% da extensao do botão*/
+    width: 100%;  
+    
+}
+
+@media (max-width: 800px) {
+    .header-menu {
+        gap: 20px;
+    }
+
+    .header-menu a {
+        background: var(--cor-11);
+        padding: 12px 16px;
+        border-radius: 4px;
+    }
+
+    .header-menu a:hover {
+        background: var(--cor-10);
+    }
+    
+    .header a:after {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-menu a{
+        gap: 8px 12px;
+        font-size: 15px;
+    }
+}
