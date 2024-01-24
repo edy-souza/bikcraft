@@ -47,30 +47,10 @@
     .depoimento {
         grid-template-columns: 1fr;
         text-align: center;
-        font-size: 4rem;
     }
 
     .depoimento-conteudo {
-        padding: 40px 20px;
-        justify-content: center;
+        justify-self: center;
     }
-
-    .depoimento p::before {
-        content: '“';    
-        left: -28px;
-        top: -20px;
-    }
-
-    .depoimento p::after {
-        content: '”';
-        left: 328px;
-    }
-    
-
-    .depoimento p::before,
-    .depoimento p::after {
-    font-size: 3.5rem;
-    color: var(--cor-p2);
-    position: absolute;
 }
-}
+
